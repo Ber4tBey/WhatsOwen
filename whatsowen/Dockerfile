@@ -1,4 +1,4 @@
-FROM fusuf/whatsasena:latest
+FROM ber4tbey/whatsowen:latest
 
 RUN git clone https://github.com/Ber4tbey/WhatsOwen /root/WhatsOwen
 WORKDIR /root/WhatsOwen/
