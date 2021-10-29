@@ -9,7 +9,7 @@
 
 const chalk = require('chalk');
 const {WAConnection, MessageOptions, MessageType, Mimetype} = require('@adiwajshing/baileys');
-const {StringSession} = require('./whatsasena/');
+const {StringSession} = require('./whatsowen/');
 const fs = require('fs');
 
 
