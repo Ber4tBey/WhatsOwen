@@ -65,6 +65,6 @@ Owen'yi kurarak, bu sorumlulukları kabul etmiş sayılırsınız.
 ## Lisans
 `GNU General Public Licence v3.0` lisansı.
 ## Thanks 
-[![YusufUsta](https://github.com/fusuf)
-[![WhatsAsena](https://github.com/fusuf/WhatsAsena)
-[![WhatsAsenaDuplicated](https://github.com/phaticusthiccy/whatsasenaduplicated)
+[YusufUsta](https://github.com/fusuf)
+[WhatsAsena](https://github.com/fusuf/WhatsAsena)
+[WhatsAsenaDuplicated](https://github.com/phaticusthiccy/whatsasenaduplicated)
