@@ -10,7 +10,7 @@
     <br>
 </p>
 
-![Docker Pulls](https://img.shields.io/docker/pulls/erdewbey/whatsowen?style=flat-square)
+![Docker Pulls](https://img.shields.io/docker/pulls/ber4tbey/whatsowen?style=flat-square)
 ----
 
 ## 📢 Kılavuz
