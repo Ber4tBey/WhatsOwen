@@ -1,0 +1,40 @@
+{
+  "name": "WhatsOwen",
+  "version": "1.0",
+  "description": "WhatsOwen project - a Whatsapp userbot helping to improve your Whatsapp experience.",
+  "main": "./WhatsOwen/bot.js",
+  "scripts": {
+    "start": "supervisor -s bot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ber4tbey/WhatsOwen.git"
+  },
+  "keywords": [
+    "whatsapp",
+    "bot",
+    "ai",
+    "owen",
+    "api",
+    "unlimited",
+    "owendev",
+    "machine learning",
+    "automatic",
+    "whatsapp web",
+    "whatsapp api",
+    "Whatsowen"
+  ],
+  "author": "Ber4tbey/ Erdewbey",
+  "developer": "Ber4tbey/ Erdewbey",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "https://github.com/Ber4tbey/WhatsOwen#readme",
+  "dependencies": {
+    "whatssiri-npm": "git+https://github.com/Ber4tbey/whatssiri-npm.git",
+    "@adiwajshing/baileys": "^3.5.2",
+    "chalk": "^4.1.2",
+    "translatte": "3.0.1"
+  }
+}
