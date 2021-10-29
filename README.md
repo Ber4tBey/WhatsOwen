@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/Ber4tbey/WhatsOwen/blob/master/logo.jpg" width="400" height="400">
+  <img src="https://github.com/Ber4tbey/WhatsOwen/logo.jpg" width="400" height="400">
   <h1> WhatsOwen</h1>
 </div>
 <p align="center">
