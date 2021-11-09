@@ -20,12 +20,9 @@ const Lang = Language.getString('system_stats');
 
 if (Config.WORKTYPE == 'private') {
     if (!Config.ALIVEMSG == 'default') {
-    Owen.addCommand({pattern: 'alive', fromMe: true, desc: Lang.ALIVE_DESC}, (async (message, match) => {
-        
-        let pp
-        try { pp = await message.client.getProfilePicture(message.jid.includes('-') ? message.data.participant : message.jid ); } catch { pp = await message.client.getProfilePicture(); }
-        await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => { await message.client.sendMessage(message.jid, { caption: Config.ALIVEMSG }); });
-    }));
+    Owen.addCommand({pattern: 'alive', fromMe: true, desc: Lang.ALIVE_DESC}, (async (message, match) => { 
+    await message.client.sendMessage(message.jid, { caption: Config.ALIVEMSG });
+}));
 }
 if (Config.ALIVEMSG == 'default') {
 var r_text = new Array ();    
@@ -61,23 +58,11 @@ r_text[28] = "There are three things you can do with your life: You can waste it
 r_text[29] = "You only pass through this life once, you don't come back for an encore.\n       -Elvis Presley";
 r_text[30] = "motivate cheyaan aarkum kayyum ath cheyth kaanikkaaana paad.\n       -Pinky";    
 var i = Math.floor(31*Math.random())
+Owen.addCommand({pattern: 'alive', fromMe: true, desc: Lang.ALIVE_DESC}, (async (message, match) => { 
+    await client.sendMessage(r_text[i])
 
-    Owen.addCommand({pattern: 'alive', fromMe: true, desc: Lang.ALIVE_DESC}, (async (message, match) => {
-        
-        let pp
-        try { pp = await message.client.getProfilePicture(message.jid.includes('-') ? message.data.participant : message.jid ); } catch { pp = await message.client.getProfilePicture(); }
-        await message.client.sendMessage(message.jid,{ caption: r_text[i] }); }));
-    };
+}))}}
 
-
-    Owen.addCommand({pattern: 'sysd', fromMe: true, desc: Lang.SYSD_DESC}, (async (message, match) => {
-
-        const child = spawnSync('neofetch', ['--stdout']).stdout.toString('utf-8')
-        await message.sendMessage(
-            '```' + child + '```', MessageType.text
-        );
-    }));
-}
 
 
 
