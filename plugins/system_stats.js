@@ -24,7 +24,7 @@ if (Config.WORKTYPE == 'private') {
         
         let pp
         try { pp = await message.client.getProfilePicture(message.jid.includes('-') ? message.data.participant : message.jid ); } catch { pp = await message.client.getProfilePicture(); }
-        await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => { await message.client.sendMessage(message.jid, res.data, MessageType.image, { caption: Config.ALIVEMSG }); });
+        await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => { await message.client.sendMessage(message.jid, { caption: Config.ALIVEMSG }); });
     }));
 }
 if (Config.ALIVEMSG == 'default') {
@@ -66,7 +66,7 @@ var i = Math.floor(31*Math.random())
         
         let pp
         try { pp = await message.client.getProfilePicture(message.jid.includes('-') ? message.data.participant : message.jid ); } catch { pp = await message.client.getProfilePicture(); }
-        await message.client.sendMessage(message.jid, res.data, MessageType.image, { caption: r_text[i] }); }));
+        await message.client.sendMessage(message.jid,{ caption: r_text[i] }); }));
     };
 
 
@@ -78,6 +78,7 @@ var i = Math.floor(31*Math.random())
         );
     }));
 }
+
 
 
 
