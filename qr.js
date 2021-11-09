@@ -18,6 +18,7 @@ async function whatsOwen () {
     const conn = new WAConnection();
     const Session = new StringSession();  
     conn.version = [3, 3234, 9]
+    conn.browserDesription = ["WhatsOwen", "Chrome", "10.0"]
     conn.logger.level = 'warn';
     conn.regenerateQRIntervalMs = 50000;
 
