@@ -82,7 +82,11 @@ Array.prototype.remove = function() {
 async function WhatsOwen () {
     const WhatsOwenCN = new WAConnection();
     const Session = new StringSession();
-    WhatsOwenCN.version = [2, 2126, 14]
+    try {
+      WhatsOwenCN.version = [3, 3234, 9]
+    } catch {
+      console.log(`passed v${WhatsOwenCN.version}`)
+    }
     WhatsOwenCN.setMaxListeners(0);
     var proxyAgent_var = ''
     if (config.PROXY.includes('https') || config.PROXY.includes('http')) {
