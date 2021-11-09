@@ -19,13 +19,22 @@ const Lang = Language.getString('system_stats');
 
 
 if (Config.WORKTYPE == 'private') {
-
+    if (!Config.WORKTYPE == 'default') {
     Owen.addCommand({pattern: 'alive', fromMe: true, desc: Lang.ALIVE_DESC}, (async (message, match) => {
         
         let pp
         try { pp = await message.client.getProfilePicture(message.jid.includes('-') ? message.data.participant : message.jid ); } catch { pp = await message.client.getProfilePicture(); }
         await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => { await message.client.sendMessage(message.jid, res.data, MessageType.image, { caption: Config.ALIVEMSG }); });
     }));
+}
+if (Config.WORKTYPE == 'default') {
+    Owen.addCommand({pattern: 'alive', fromMe: true, desc: Lang.ALIVE_DESC}, (async (message, match) => {
+        
+        let pp
+        try { pp = await message.client.getProfilePicture(message.jid.includes('-') ? message.data.participant : message.jid ); } catch { pp = await message.client.getProfilePicture(); }
+        await message.client.sendMessage(message.jid, res.data, MessageType.image, { caption: r_text[i] }); }));
+    };
+
 
     Owen.addCommand({pattern: 'sysd', fromMe: true, desc: Lang.SYSD_DESC}, (async (message, match) => {
 
@@ -34,16 +43,14 @@ if (Config.WORKTYPE == 'private') {
             '```' + child + '```', MessageType.text
         );
     }));
-}
-else if (Config.WORKTYPE == 'public') {
 
-   Owen.addCommand({pattern: 'alive', fromMe: false, desc: Lang.ALIVE_DESC}, (async (message, match) => {
-	 var plk_say = new Date().toLocaleString('HI', { timeZone: 'Asia/Kolkata' }).split(' ')[1]
-        const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-        var plk_here = new Date().toLocaleDateString(get_localized_date)
-	var afn_plk_ = '```⏱ Time :' + plk_say + '```\n\n ```📅 Date :' + plk_here + '```'
+
+
+
+   
+	 
 	   
-	   	     var r_text = new Array ();    
+var r_text = new Array ();    
 r_text[0] = "The greatest glory in living lies not in never falling, but in rising every time we fall.\n           -Nelson Mandela";
 r_text[1] = "The way to get started is to quit talking and begin doing.\n           -Walt Disney";
 r_text[2] = "Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma – which is living with the results of other people's thinking.\n        -Steve Jobs";
@@ -77,50 +84,6 @@ r_text[29] = "You only pass through this life once, you don't come back for an e
 r_text[30] = "motivate cheyaan aarkum kayyum ath cheyth kaanikkaaana paad.\n       -Pinky";    
 var i = Math.floor(31*Math.random())
        
-    if (Config.ALIVEMSG.includes('{pp}')) {
-        
-        let pp
-        try { pp = await message.client.getProfilePicture(message.jid.includes('-') ? message.data.participant : message.jid ); } catch { pp = await message.client.getProfilePicture(); }
-        await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => { await message.client.sendMessage(message.jid, res.data, MessageType.image, { caption: Config.ALIVEMSG.replace('{pp}', '').replace('{time}', afn_plk_).replace('{qt}', r_text[i])}); });
-	}    
-	   else {
-		   
-		   var a_plk = new Array ();
-
-        a_plk[0] = "https://i.imgur.com/zdcqaaG.jpeg";
-        a_plk[1] = "https://mcdn.wallpapersafari.com/medium/20/69/juFNVl.jpg";
-        a_plk[2] = "https://cdn.wallpapersafari.com/51/57/WXxpck.jpg";
-        a_plk[3] = "https://cdn.wallpapersafari.com/72/42/nAdV2j.jpg";
-        a_plk[4] = "https://cdn.wallpapersafari.com/55/85/n5cLrp.jpg";
-        a_plk[5] = "https://i.imgur.com/zdcqaaG.jpeg";
-        a_plk[6] = "https://mcdn.wallpapersafari.com/medium/55/25/KrvA7S.jpg";
-        a_plk[7] = "https://images.pexels.com/photos/8294554/pexels-photo-8294554.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
-        a_plk[8] = "https://images.pexels.com/photos/8566473/pexels-photo-8566473.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
-        a_plk[9] = "https://wallpapercave.com/wp/wp2957455.jpg";
-        a_plk[10] = "https://i.imgur.com/1PPJq0Q.jpeg";
-	 var p = Math.floor(11*Math.random())
-
-        var plk_alive = await axios.get(`${a_plk[p]}`, { responseType: 'arraybuffer' })
-
-        await message.client.sendMessage(message.jid, Buffer(plk_alive.data), MessageType.image, {mimetype: Mimetype.png, caption: Config.ALIVEMSG.replace('{time}', afn_plk_).replace('{qt}', r_text[i])})
-	   }
-    }));
-
-    
-    
-    Owen.addCommand({pattern: 'sysd', fromMe: false, desc: Lang.SYSD_DESC}, (async (message, match) => {
-
-        const child = spawnSync('neofetch', ['--stdout']).stdout.toString('utf-8')
-        await message.sendMessage(
-            '```' + child + '```', MessageType.text
-        );
-    }));
-    
-    Owen.addCommand({pattern: 'psyd', fromMe: true, desc: Lang.SYSD_DESC, dontAddCommandList: true }, (async (message, match) => {
-
-        const child = spawnSync('neofetch', ['--stdout']).stdout.toString('utf-8')
-        await message.sendMessage(
-            '```' + child + '```', MessageType.text
-        );
-    }));
 }
+
+
