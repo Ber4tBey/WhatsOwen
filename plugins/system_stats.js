@@ -27,7 +27,7 @@ if (Config.WORKTYPE == 'private') {
         await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => { await message.client.sendMessage(message.jid, res.data, MessageType.image, { caption: Config.ALIVEMSG }); });
     }));
 }
-if (Config.WORKTYPE == 'default') {
+if (Config.ALIVEMSG == 'default') {
 var r_text = new Array ();    
 r_text[0] = "The greatest glory in living lies not in never falling, but in rising every time we fall.\n           -Nelson Mandela";
 r_text[1] = "The way to get started is to quit talking and begin doing.\n           -Walt Disney";
@@ -86,6 +86,9 @@ var i = Math.floor(31*Math.random())
 	   
 
        
+
+
+
 
 
 
