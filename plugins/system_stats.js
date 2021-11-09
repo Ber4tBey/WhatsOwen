@@ -59,7 +59,7 @@ r_text[29] = "You only pass through this life once, you don't come back for an e
 r_text[30] = "motivate cheyaan aarkum kayyum ath cheyth kaanikkaaana paad.\n       -Pinky";    
 var i = Math.floor(31*Math.random())
 Owen.addCommand({pattern: 'alive', fromMe: true, desc: Lang.ALIVE_DESC}, (async (message, match) => { 
-    await client.sendMessage(r_text[i])
+    await message.client.sendMessage(r_text[i])
 
 }))}}
 
