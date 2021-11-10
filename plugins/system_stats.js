@@ -23,7 +23,7 @@ await message.sendMessage(Config.ALIVEMSG);
 
 
 if (Config.ALIVEMSG == 'default') {
-Owen.addCommand({pattern: 'alive', fromMe: false,dontAddCommandList: true}, (async (message, match) => {
+Owen.addCommand({pattern: 'alive', fromMe: true,dontAddCommandList: true}, (async (message, match) => {
     
     var r_text = new Array ();    
 r_text[0] = "Userbotunuz çalışıyor ve sana bişey demek istiyor.. Seni seviyorum ❤️\n";
