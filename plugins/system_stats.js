@@ -8,17 +8,6 @@
 # WhatsOwen - Ber4tbey - Erdewbey.*/
 
 
-const Owen = require('../events');
-const {MessageType, Mimetype, MessageOptions} = require('@adiwajshing/baileys');
-const {spawnSync} = require('child_process');
-const Config = require('../config');
-const chalk = require('chalk');
-const Axios = require('axios');
-const fs = require('fs')
-const Language = require('../language');
-const Lang = Language.getString('system_stats');
-
-
 if (!Config.ALIVEMSG == 'default') {
     Owen.addCommand({pattern: 'alive', fromMe: true,dontAddCommandList: true}, (async (message, match) => {
     await message.sendMessage(Config.ALIVEMSG);
@@ -39,9 +28,8 @@ if (!Config.ALIVEMSG == 'default') {
             
             await message.sendMessage(r_text[i]);
             
-        }))};
-    }
- 
+}))};
+} 
 
     
     
