@@ -16,7 +16,7 @@ const Config = require('../config');
 
 if (!Config.ALIVEMSG == 'default') {
 Owen.addCommand({pattern: 'alive', fromMe: true,dontAddCommandList: true}, (async (message, match) => {
-await message.sendMessage(ALIVEMSG);
+await message.sendMessage(Config.ALIVEMSG);
 
  }));
 }
