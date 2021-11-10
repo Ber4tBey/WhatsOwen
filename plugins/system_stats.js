@@ -5,7 +5,7 @@
 #
 
 
-# WhatsOwen - Ber4tbey - Erdewbey*/
+# WhatsOwen - Ber4tbey - Erdewbey.*/
 
 const Owen = require('../events');
 const {MessageType, Mimetype, MessageOptions} = require('@adiwajshing/baileys');
