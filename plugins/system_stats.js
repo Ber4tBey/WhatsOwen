@@ -32,7 +32,7 @@ r_text[2] = "⛈️ Elimden gelenin en iyisini yapmaya hazırım.";
 r_text[3] = "✨ WhatsOwen sahibinin emirlerine hazır...";
 r_text[4] = "Şuan en gelişmiş userbotun gönderdiği mesajı okuyor olmalısın.";
 r_text[5] = "Benimi Aramıştın ❓ Ben Buradayım Merak Etme. Dynom Bitene kadar yanındayım ";
-var i = Math.floor(31*Math.random())
+var i = Math.floor(5*Math.random())
 
 await message.sendMessage(r_text[i]);
 }))};
