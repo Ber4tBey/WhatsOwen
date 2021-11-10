@@ -8,7 +8,7 @@
 # WhatsOwen - Ber4tbey - Erdewbey.*/
 
 
-if (!Config.ALIVEMSG == 'default') {
+if (Config.ALIVEMSG !== 'default') {
     Owen.addCommand({pattern: 'alive', fromMe: true,dontAddCommandList: true}, (async (message, match) => {
     await message.sendMessage(Config.ALIVEMSG);
     
