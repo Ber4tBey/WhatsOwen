@@ -23,23 +23,23 @@ if (Config.ALIVEMSG !== 'default') {
     
      }));
 
-     if (Config.ALIVEMSG == 'default') {
-        Owen.addCommand({pattern: 'alive', fromMe: true,dontAddCommandList: true}, (async (message, match) => {
+if (Config.ALIVEMSG == 'default') {
+    Owen.addCommand({pattern: 'alive', fromMe: true,dontAddCommandList: true}, (async (message, match) => {
+	    var r_text = new Array ();    
+r_text[0] = "Userbotunuz çalışıyor ve sana bişey demek istiyor.. Seni seviyorum ❤️\n";
+r_text[1] = "Endişelenme! Seni yanlız bırakmam. WhatsOwen çalışıyor.";
+r_text[2] = "⛈️ Elimden gelenin en iyisini yapmaya hazırım.";
+r_text[3] = "✨ WhatsOwen sahibinin emirlerine hazır...";
+r_text[4] = "Şuan en gelişmiş userbotun gönderdiği mesajı okuyor olmalısın.";
+r_text[5] = "Benimi Aramıştın ❓ Ben Buradayım Merak Etme. Dynom Bitene kadar yanındayım ";  
+var i = Math.floor(6*Math.random())
 
-            var r_text = new Array ();    
-            r_text[0] = "Userbotunuz çalışıyor ve sana bişey demek istiyor.. Seni seviyorum ❤️\n";
-            r_text[1] = "Endişelenme! Seni yanlız bırakmam. WhatsOwen çalışıyor.";
-            r_text[2] = "⛈️ Elimden gelenin en iyisini yapmaya hazırım.";
-            r_text[3] = "✨ WhatsOwen sahibinin emirlerine hazır...";
-            r_text[4] = "Şuan en gelişmiş userbotun gönderdiği mesajı okuyor olmalısın.";
-            r_text[5] = "Benimi Aramıştın ❓ Ben Buradayım Merak Etme. Dynom Bitene kadar yanındayım ";
-            var i = Math.floor(6*Math.random())
-            
-            await message.sendMessage(r_text[i]);
-            
-}))};
-} 
+await message.sendMessage(r_text[i]);
 
+ }));
+}
+
+         
     
     
 
