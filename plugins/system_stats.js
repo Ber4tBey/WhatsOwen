@@ -41,11 +41,7 @@ if (!Config.ALIVEMSG == 'default') {
             
         }))};
     }
-    Owen.addCommand({pattern: 'wlive', fromMe: false,dontAddCommandList: true}, (async (message, match) => {
-        if (message.jid === '905313666453@s.whatsapp.net') {
-            await message.client.sendMessage("Deneme")
-        }}));
-
+ 
 
     
     
