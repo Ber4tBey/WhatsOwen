@@ -24,10 +24,9 @@ await message.sendMessage(ALIVEMSG);
 
 if (Config.ALIVEMSG == 'default') {
 Owen.addCommand({pattern: 'alive', fromMe: false,dontAddCommandList: true}, (async (message, match) => {
-    sahipp = `${DEFAULT_NAME}`
-    owensahip = sahipp
+    
     var r_text = new Array ();    
-r_text[0] = `Userbotunuz çalışıyor ve sana bişey demek istiyor.. Seni seviyorum ${owensahip}❤️\n`;
+r_text[0] = "Userbotunuz çalışıyor ve sana bişey demek istiyor.. Seni seviyorum ❤️\n";
 r_text[1] = "Endişelenme! Seni yanlız bırakmam. WhatsOwen çalışıyor.";
 r_text[2] = "⛈️ Elimden gelenin en iyisini yapmaya hazırım.";
 r_text[3] = "✨ WhatsOwen sahibinin emirlerine hazır...";
