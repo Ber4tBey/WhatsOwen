@@ -1,13 +1,3 @@
-/*# Copyright (C) 2021 The OwenProjects Company LLC.
-#
-# Licensed under the OwenProjects Public License, Version 1.c (the "License");
-# you may not use this file except in compliance with the License.
-#
-
-# Thanks github.com/spechide for creating inline bot support.
-# WhatsOwen - Ber4tbey - Erdewbey*/
-
-
 /* Codded by Phaticusthiccy
 Eva, The Phaticusthiccy's Multifunctional Artificial Intelligence
 Eva AI has more than 50 Gigabyte dataset which including neural calculator,
@@ -115,7 +105,7 @@ Owen.addCommand({on: 'text', fromMe: wk, dontAddCommandList: true, deleteCommand
         } else if (conf.WORKTYPE == 'public') {
             unique_ident = message.client.user.jid.split('@')[0] + 'PUBLIC' + message.data.participant.split('@')[0]
         }
-        let acc = os.userInfo().homedir.split('Whats')[1].split('Owe/')[0] == 'n' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
+        let acc = os.userInfo().homedir.split('Whats')[1].split('n/')[0] == 'Owe' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
         let aitalk_mode = ''
         if (message.message.includes('{normal}')) {
             aitalk_mode = 'raw'
@@ -134,7 +124,7 @@ Owen.addCommand({on: 'text', fromMe: wk, dontAddCommandList: true, deleteCommand
         } else if (conf.WORKTYPE == 'public') {
             finm = message.message.replace('Eva', '').replace(' ', '').replace('@' + message.client.user.jid.split('@')[0], '')
         }
-        var ainame = os.userInfo().homedir.split('Whats')[1].split('Owe/')[0]
+        var ainame = os.userInfo().homedir.split('Whats')[1].split('n/')[0]
         if (ainame !== 'Owen') return;
         var ldet = lngDetector.detect(finm)
         var trmsg = ''
@@ -175,9 +165,9 @@ Owen.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (messa
                     if (message.client.user.jid.split('@')[0] === jid.split('@')[0]) {
                         var unique_ident = ''
                         unique_ident = message.client.user.jid.split('@')[0] + 'PUBLIC' + message.data.participant.split('@')[0]
-                        let acc = os.userInfo().homedir.split('Whats')[1].split('Owe/')[0] == 'n' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
+                        let acc = os.userInfo().homedir.split('Whats')[1].split('n/')[0] == 'Owe' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
                         let aitalk_mode = message.message.includes('{normal}') ? 'raw' : 'waifu'                       
-                        var ainame = os.userInfo().homedir.split('Whats')[1].split('Owe/')[0]
+                        var ainame = os.userInfo().homedir.split('Whats')[1].split('n/')[0]
                         if (ainame !== 'Owen') return;
                         var finm = message.message.replace('Eva', '').replace(' ', '').replace('@' + message.client.user.jid.split('@')[0], '')
                         var ldet = lngDetector.detect(finm)
@@ -215,8 +205,8 @@ Owen.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (messa
                 if (message.reply_message.jid.split('@')[0] === message.client.user.jid.split('@')[0]) {
                     var unique_ident = ''
                     unique_ident = message.client.user.jid.split('@')[0] + 'PUBLIC' + message.data.participant.split('@')[0]
-                    let acc = os.userInfo().homedir.split('Whats')[1].split('Owe/')[0] == 'n' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
-                    var ainame = os.userInfo().homedir.split('Whats')[1].split('Owe/')[0]
+                    let acc = os.userInfo().homedir.split('Whats')[1].split('n/')[0] == 'Owe' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
+                    var ainame = os.userInfo().homedir.split('Whats')[1].split('n/')[0]
                     if (ainame !== 'Owen') return;
                     var finm = message.message.replace('Eva', '').replace(' ', '').replace('@' + message.client.user.jid.split('@')[0], '')
                     var ldet = lngDetector.detect(finm)
@@ -252,8 +242,8 @@ Owen.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (messa
             } else {
                 var unique_ident = ''
                 unique_ident = message.client.user.jid.split('@')[0] + 'PUBLIC' + message.data.participant.split('@')[0]
-                let acc = os.userInfo().homedir.split('Whats')[1].split('Owe/')[0] == 'n' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
-                var ainame = os.userInfo().homedir.split('Whats')[1].split('Owe/')[0]
+                let acc = os.userInfo().homedir.split('Whats')[1].split('n/')[0] == 'Owe' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
+                var ainame = os.userInfo().homedir.split('Whats')[1].split('n/')[0]
                 if (ainame !== 'Owen') return;
                 var finm = message.message.replace('Eva', '').replace(' ', '').replace('@' + message.client.user.jid.split('@')[0], '')
                 var ldet = lngDetector.detect(finm)
@@ -313,8 +303,8 @@ Owen.addCommand({ pattern: 'vtalk$', desc: vtalk_dsc, fromMe: wk }, (async (mess
                 } else if (conf.WORKTYPE == 'public') {
                     unique_ident = message.client.user.jid.split('@')[0] + 'PUBLIC' + message.data.participant.split('@')[0]
                 }
-                let acc = os.userInfo().homedir.split('Whats')[1].split('Owe/')[0] == 'n' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'       
-                var ainame = os.userInfo().homedir.split('Whats')[1].split('Owe/')[0]
+                let acc = os.userInfo().homedir.split('Whats')[1].split('n/')[0] == 'Owe' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'       
+                var ainame = os.userInfo().homedir.split('Whats')[1].split('n/')[0]
                 if (ainame !== 'Owen') return;
                 var payload_client = await WhatsOwenStack.get_eva_ai(encodeURIComponent(ssc), 'Eva', 'Phaticusthiccy', 'WhatsOwen', unique_ident)
                 var fins = ''                           
