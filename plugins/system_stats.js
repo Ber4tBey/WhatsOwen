@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 #
 
-# Thanks github.com/spechide for creating inline bot support.
+
 # WhatsOwen - Ber4tbey - Erdewbey*/
 
 const Owen = require('../events');
