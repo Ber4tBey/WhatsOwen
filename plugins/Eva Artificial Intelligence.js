@@ -8,6 +8,40 @@
 # WhatsOwen - Ber4tbey - Erdewbey*/
 
 
+/* Codded by Phaticusthiccy
+Eva, The Phaticusthiccy's Multifunctional Artificial Intelligence
+Eva AI has more than 50 Gigabyte dataset which including neural calculator,
+wikipedia data, sentiment analysis, Instagram workflow with neural cells.
+Thanks for Brainshop.ai for a rest connection with non-ethernet interaction
+Eva database. 
+Eva is a multimedia-powered artificial intelligence with its own virtual brain.
+Brainshop.ai allow access to load all external conversation for train Neural cells,
+from every user's historical conversations.
+Think twice about your choices about Eva. 
+May react differently in directed situations. This is completely natural and depends on users.
+All message history with Eva is not exported to any 3rd applications.
+Since Eva works entirely with deep learning, all responsibility belongs to the user.
+Arvix Articles About Eva's System:
+>> https://arxiv.org/abs/2106.09461
+>> https://arxiv.org/abs/2102.00287
+>>https://arxiv.org/abs/2106.06157
+Wikipedia Articles About Eva'a System:
+>> https://en.m.wikipedia.org/wiki/Optical_character_recognition
+>> https://en.m.wikipedia.org/wiki/Text_mining
+>> https://en.m.wikipedia.org/wiki/Natural_language_processing
+*/
+// ===================================================
+/*
+Eva has never been connected to the internet previously.
+The Brainshop.ai supports to javascript datasets, so thats way we cloned some datas from Eva to 
+Brainshop.ai. 
+Therefore, 100% efficiency cannot be obtained from Eva Artificial Intelligence.
+The voice recognition doesn't work with eva infrastructure.
+We are using wit.ai's voice recognition for voicy conversation.
+The all input datas must be english. We are using google translate before send users inputs.
+*/
+
+
 const Owen = require('../events');
 const ffmpeg = require('fluent-ffmpeg');
 const fs = require('fs');
@@ -21,7 +55,7 @@ const axios = require('axios')
 const axiosdef = require("axios").default;
 const os = require('os')
 const translatte = require('translatte');
-const WhatsOwenStack = require('whatssiri-npm');
+const WhatsOwenStack = require('whatsOwen-npm');
 const LanguageDetect = require('languagedetect');
 const lngDetector = new LanguageDetect();
 const Heroku = require('heroku-client');
@@ -81,7 +115,7 @@ Owen.addCommand({on: 'text', fromMe: wk, dontAddCommandList: true, deleteCommand
         } else if (conf.WORKTYPE == 'public') {
             unique_ident = message.client.user.jid.split('@')[0] + 'PUBLIC' + message.data.participant.split('@')[0]
         }
-        let acc = os.userInfo().homedir.split('Whats')[1].split('wen/')[0] == 'O' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
+        let acc = os.userInfo().homedir.split('Whats')[1].split('Owe/')[0] == 'n' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
         let aitalk_mode = ''
         if (message.message.includes('{normal}')) {
             aitalk_mode = 'raw'
@@ -100,7 +134,7 @@ Owen.addCommand({on: 'text', fromMe: wk, dontAddCommandList: true, deleteCommand
         } else if (conf.WORKTYPE == 'public') {
             finm = message.message.replace('Eva', '').replace(' ', '').replace('@' + message.client.user.jid.split('@')[0], '')
         }
-        var ainame = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0]
+        var ainame = os.userInfo().homedir.split('Whats')[1].split('Owe/')[0]
         if (ainame !== 'Owen') return;
         var ldet = lngDetector.detect(finm)
         var trmsg = ''
@@ -120,7 +154,7 @@ Owen.addCommand({on: 'text', fromMe: wk, dontAddCommandList: true, deleteCommand
                 trmsg = ceviri.text
             }
         }
-        var payload_client = await WhatsOwenStack.get_eva_ai(encodeURIComponent(trmsg), 'Eva', 'Ber4tbey', 'WhatsOwen', unique_ident)
+        var payload_client = await WhatsOwenStack.get_eva_ai(encodeURIComponent(trmsg), 'Eva', 'Phaticusthiccy', 'WhatsOwen', unique_ident)
         var fins = ''                           
         if (conf.LANG !== 'EN') {
             ceviri = await translatte(payload_client.result, {from: 'auto', to: conf.LANG});
@@ -141,9 +175,9 @@ Owen.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (messa
                     if (message.client.user.jid.split('@')[0] === jid.split('@')[0]) {
                         var unique_ident = ''
                         unique_ident = message.client.user.jid.split('@')[0] + 'PUBLIC' + message.data.participant.split('@')[0]
-                        let acc = os.userInfo().homedir.split('Whats')[1].split('wen/')[0] == 'O' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
+                        let acc = os.userInfo().homedir.split('Whats')[1].split('Owe/')[0] == 'n' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
                         let aitalk_mode = message.message.includes('{normal}') ? 'raw' : 'waifu'                       
-                        var ainame = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0]
+                        var ainame = os.userInfo().homedir.split('Whats')[1].split('Owe/')[0]
                         if (ainame !== 'Owen') return;
                         var finm = message.message.replace('Eva', '').replace(' ', '').replace('@' + message.client.user.jid.split('@')[0], '')
                         var ldet = lngDetector.detect(finm)
@@ -164,7 +198,7 @@ Owen.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (messa
                                 trmsg = ceviri.text
                             }
                         }
-                        var payload_client = await WhatsOwenStack.get_eva_ai(encodeURIComponent(trmsg), 'Eva', 'Ber4tbey', 'WhatsOwen', unique_ident)
+                        var payload_client = await WhatsOwenStack.get_eva_ai(encodeURIComponent(trmsg), 'Eva', 'Phaticusthiccy', 'WhatsOwen', unique_ident)
                         var fins = ''                           
                         if (conf.LANG !== 'EN') {
                             ceviri = await translatte(payload_client.result, {from: 'auto', to: conf.LANG});
@@ -181,8 +215,8 @@ Owen.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (messa
                 if (message.reply_message.jid.split('@')[0] === message.client.user.jid.split('@')[0]) {
                     var unique_ident = ''
                     unique_ident = message.client.user.jid.split('@')[0] + 'PUBLIC' + message.data.participant.split('@')[0]
-                    let acc = os.userInfo().homedir.split('Whats')[1].split('wen/')[0] == 'O' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
-                    var ainame = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0]
+                    let acc = os.userInfo().homedir.split('Whats')[1].split('Owe/')[0] == 'n' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
+                    var ainame = os.userInfo().homedir.split('Whats')[1].split('Owe/')[0]
                     if (ainame !== 'Owen') return;
                     var finm = message.message.replace('Eva', '').replace(' ', '').replace('@' + message.client.user.jid.split('@')[0], '')
                     var ldet = lngDetector.detect(finm)
@@ -203,7 +237,7 @@ Owen.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (messa
                             trmsg = ceviri.text
                         }
                     }
-                    var payload_client = await WhatsOwenStack.get_eva_ai(encodeURIComponent(trmsg), 'Eva', 'Ber4tbey', 'WhatsOwen', unique_ident)
+                    var payload_client = await WhatsOwenStack.get_eva_ai(encodeURIComponent(trmsg), 'Eva', 'Phaticusthiccy', 'WhatsOwen', unique_ident)
                     var fins = ''                           
                     if (conf.LANG !== 'EN') {
                         ceviri = await translatte(payload_client.result, {from: 'auto', to: conf.LANG});
@@ -218,8 +252,8 @@ Owen.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (messa
             } else {
                 var unique_ident = ''
                 unique_ident = message.client.user.jid.split('@')[0] + 'PUBLIC' + message.data.participant.split('@')[0]
-                let acc = os.userInfo().homedir.split('Whats')[1].split('wen/')[0] == 'O' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
-                var ainame = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0]
+                let acc = os.userInfo().homedir.split('Whats')[1].split('Owe/')[0] == 'n' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
+                var ainame = os.userInfo().homedir.split('Whats')[1].split('Owe/')[0]
                 if (ainame !== 'Owen') return;
                 var finm = message.message.replace('Eva', '').replace(' ', '').replace('@' + message.client.user.jid.split('@')[0], '')
                 var ldet = lngDetector.detect(finm)
@@ -240,7 +274,7 @@ Owen.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (messa
                         trmsg = ceviri.text
                     }
                 }
-                var payload_client = await WhatsOwenStack.get_eva_ai(encodeURIComponent(trmsg), 'Eva', 'Ber4tbey', 'WhatsOwen', unique_ident)
+                var payload_client = await WhatsOwenStack.get_eva_ai(encodeURIComponent(trmsg), 'Eva', 'Phaticusthiccy', 'WhatsOwen', unique_ident)
                 var fins = ''                           
                 if (conf.LANG !== 'EN') {
                     ceviri = await translatte(payload_client.result, {from: 'auto', to: conf.LANG});
@@ -279,10 +313,10 @@ Owen.addCommand({ pattern: 'vtalk$', desc: vtalk_dsc, fromMe: wk }, (async (mess
                 } else if (conf.WORKTYPE == 'public') {
                     unique_ident = message.client.user.jid.split('@')[0] + 'PUBLIC' + message.data.participant.split('@')[0]
                 }
-                let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'Owen' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'       
-                var ainame = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0]
+                let acc = os.userInfo().homedir.split('Whats')[1].split('Owe/')[0] == 'n' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'       
+                var ainame = os.userInfo().homedir.split('Whats')[1].split('Owe/')[0]
                 if (ainame !== 'Owen') return;
-                var payload_client = await WhatsOwenStack.get_eva_ai(encodeURIComponent(ssc), 'Eva', 'Ber4tbey', 'WhatsOwen', unique_ident)
+                var payload_client = await WhatsOwenStack.get_eva_ai(encodeURIComponent(ssc), 'Eva', 'Phaticusthiccy', 'WhatsOwen', unique_ident)
                 var fins = ''                           
                 if (conf.LANG !== 'EN') {
                     ceviri = await translatte(payload_client.result, {from: 'auto', to: conf.LANG});
