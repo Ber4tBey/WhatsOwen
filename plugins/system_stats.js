@@ -1,12 +1,3 @@
-/*# Copyright (C) 2021 The OwenProjects Company LLC.
-#
-# Licensed under the OwenProjects Public License, Version 1.c (the "License");
-# you may not use this file except in compliance with the License.
-#
-
-
-# WhatsOwen - Ber4tbey - Erdewbey.*/
-
 const Owen = require('../events');
 const {MessageType, Mimetype, MessageOptions} = require('@adiwajshing/baileys');
 const {spawnSync} = require('child_process');
@@ -61,33 +52,6 @@ if (Config.ALIVEMSG == 'default') {
     r_text[30] = "motivate cheyaan aarkum kayyum ath cheyth kaanikkaaana paad.\n       -Pinky";    
     var i = Math.floor(31*Math.random())
     await message.sendMessage(r_text[i]);
-       
-            
-    }));
+
+}));
 }
-    
-
-         
-    
-    
-
-
-
-
-
-
-
-   
-	 
-	   
-
-       
-
-
-
-
-
-
-
-
-
